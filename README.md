@@ -1,4 +1,13 @@
-# lidar_camera_calib
+# A fork of lidar_camera_calib with docker support
+
+place the config file in the for_calib directory
+```bash
+docker build . -t livox_calib_calib:v0.1 # build the docker image 
+docker run --mount type=bind,target=/root/for_calib,source=$(pwd)/for_calib/ \
+    -e DISPLAY=$DISPLAY \
+    -v /tmp/.X11-unix:/tmp/.X11-unix livox_camera_calib:v0.1
+```
+
 **lidar_camera_calib** is a robust, high accuracy extrinsic calibration tool between high resolution LiDAR (e.g. Livox) and camera in targetless environment. Our algorithm can run in both indoor and outdoor scenes, and only requires edge information in the scene. If the scene is suitable, we can achieve pixel-level accuracy similar to or even beyond the target based method.
 <div align="center">
     <img src="pics/color_cloud.png" width = 100% >

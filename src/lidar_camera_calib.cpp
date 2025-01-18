@@ -254,7 +254,7 @@ int main(int argc, char **argv) {
   calibra.init_rgb_cloud_pub_.publish(pub_cloud);
   cv::Mat init_img = calibra.getProjectionImg(calib_params);
   cv::imshow("Initial extrinsic", init_img);
-  cv::imwrite("/home/ycj/data/calib/init.png", init_img);
+  cv::imwrite("/root/for_calib/img/init.png", init_img);
   cv::waitKey(1000);
 
   if (use_rough_calib) {
@@ -381,7 +381,7 @@ int main(int argc, char **argv) {
   outfile << 0 << "," << 0 << "," << 0 << "," << 1 << std::endl;
   cv::Mat opt_img = calibra.getProjectionImg(calib_params);
   cv::imshow("Optimization result", opt_img);
-  cv::imwrite("/home/ycj/data/calib/opt.png", opt_img);
+  cv::imwrite("/root/for_calib/img/opt.png", opt_img);
   cv::waitKey(1000);
   Eigen::Matrix3d init_rotation;
   init_rotation << 0, -1.0, 0, 0, 0, -1.0, 1, 0, 0;

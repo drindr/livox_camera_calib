@@ -1,0 +1,16 @@
+# Data path. adjust them!
+common:
+    image_file: "/root/for_calib/image.png"
+    pcd_file: "/root/for_calib/points.pcd"
+    result_file: "/root/for_calib/extrinsic.txt"
+
+# Camera Parameters. Adjust them!
+camera:
+    camera_matrix:
+        [4736.68945, 0., 1502.42148, 0., 4723.84535, 1015.51744, 0., 0., 1.]
+    dist_coeffs: [-0.417896, 1.044676, -0.002608, 0.001847, 0.000000]
+
+# Calibration Parameters.!
+calib:
+    calib_config_file: "/root/for_calib/config.yaml"
+    use_rough_calib: true # set true if your initial_extrinsic is bad
