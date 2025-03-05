@@ -9,7 +9,7 @@ docker run --mount type=bind,target=/root/for_calib,source=$(pwd)/for_calib/ \
 ```
 
 > [!WARNING]  
-> with docker, you do not have to follow each step precisely.  
+> with docker, you do not have to follow each step below precisely.  
 > the suggestion is to put image.png and points.pcd in the folder `for_calib` and bind this directory into the container.  
 > also, configuration as you like if you are familiar with docker is okay.
 
