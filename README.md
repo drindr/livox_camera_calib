@@ -8,6 +8,11 @@ docker run --mount type=bind,target=/root/for_calib,source=$(pwd)/for_calib/ \
     -v /tmp/.X11-unix:/tmp/.X11-unix livox_camera_calib:v0.1
 ```
 
+> [!WARNING]  
+> with docker, you do not have to follow each step precisely.  
+> the suggestion is to put image.png and points.pcd in the folder `for_calib` and bind this directory into the container.  
+> also, configuration as you like if you are familiar with docker is okay.
+
 **lidar_camera_calib** is a robust, high accuracy extrinsic calibration tool between high resolution LiDAR (e.g. Livox) and camera in targetless environment. Our algorithm can run in both indoor and outdoor scenes, and only requires edge information in the scene. If the scene is suitable, we can achieve pixel-level accuracy similar to or even beyond the target based method.
 <div align="center">
     <img src="pics/color_cloud.png" width = 100% >
