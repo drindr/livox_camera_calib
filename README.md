@@ -2,7 +2,7 @@
 
 place the config file in the for_calib directory
 ```bash
-docker build . -t livox_calib_calib:v0.1 # build the docker image 
+docker build . -t livox_camera_calib:v0.1 # build the docker image 
 docker run --mount type=bind,target=/root/for_calib,source=$(pwd)/for_calib/ \
     -e DISPLAY=$DISPLAY \
     -v /tmp/.X11-unix:/tmp/.X11-unix livox_camera_calib:v0.1
